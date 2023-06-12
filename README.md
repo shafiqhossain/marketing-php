@@ -310,7 +310,6 @@ The specific APIs contained are:
      * `$subscribe`: true to subscribe the contact to the list; false otherwise.
 
  - `createOrUpdateContact(
-        int $contactId,
         string $email,
         string $firstName = null,
         string $lastName = null,
@@ -324,7 +323,6 @@ The specific APIs contained are:
         bool $subscribe = true
     )`
      * Creates a contact without a list. Updates if already existing email is passed.
-     * `$contactId`: ID of the contact
      * `$email`: Email address for the contact to be created|updated
      * `$firstName`: first name of Contact
      * `$lastName`: last Name of Contact
@@ -334,7 +332,8 @@ The specific APIs contained are:
      * `$customField`: custom fields passed as associative array. Keys represent the field names while values represent the values
      * `$addTags`: tags to add to the contact. Simple array of tag names (strings).
      * `$removeTags`: tags to remove from the contact. Simple array of tag names (strings).
-     * `$removeFromDNM`: set this true to subscribe contact to the list, and remove it from DNM
+     * `$removeFromDNM`: set this true to remove it from DNM
+     * `$subscribe`: set this true to subscribe contact
 
  - `createOrUpdateForListsAndWorkflows(
         string $email,
